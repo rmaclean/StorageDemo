@@ -1,0 +1,18 @@
+﻿<Page
+    x:Class="TaskList.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TaskList"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Margin="0,50,0,0">
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Height="60" Orientation="Horizontal">
+            <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="Task Name" VerticalAlignment="Center"/>
+            <TextBox x:Name="textBox" TextWrapping="Wrap" Width="536"/>
+            <Button x:Name="button" Content="Add Task" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="button_Click"/>
+        </StackPanel>
+        <GridView x:Name="gridView" ItemsSource="{Binding}"/>
+    </StackPanel>
+</Page>
